@@ -114,6 +114,75 @@
 								<li class="directory">
 									<a href="#" class="directory">
 										<i class="fa fa-plus-square-o"></i>
+										Springmvc
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/04/05/Springmvc/Springmvc%E4%B8%8D%E5%AE%8C%E5%85%A8%E6%95%B4%E5%90%88/">
+										Springmvc不完全整合
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										java知识补充
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/04/03/java%E7%9F%A5%E8%AF%86%E8%A1%A5%E5%85%85/%E7%AC%AC%E4%B8%80%E7%AB%A0%E5%AF%B9%E8%B1%A1%E5%AF%BC%E8%AE%BA/">
+										第一章对象导论
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/04/java%E7%9F%A5%E8%AF%86%E8%A1%A5%E5%85%85/%E7%AC%AC%E4%BA%8C%E7%AB%A0%E4%B8%80%E5%88%87%E9%83%BD%E6%98%AF%E5%AF%B9%E8%B1%A1/">
+										第二章一切都是对象
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										servlet
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/04/06/servlet/servlet/">
+										servlet
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
 										初次尝试
 									</a>
 									
@@ -146,6 +215,15 @@
 								<div class="article-toc" style="display: none;"></div>
 							</ul>
 			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/04/%E6%95%B0%E6%8D%AE%E5%BA%93/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%91%BD%E4%BB%A4%E8%A1%8C%E6%93%8D%E4%BD%9C/">
+										数据库命令行操作
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
 								</li>
 								
 							</ul>
@@ -161,26 +239,6 @@
 								<li class="file">
 									<a href="/2020/04/02/%E7%89%B9%E6%9C%89%E5%90%8D%E6%AC%A1%E6%94%B6%E5%BD%95/%E7%89%B9%E6%9C%89%E5%90%8D%E8%AF%8D/">
 										特有名词
-									</a>
-								</li>
-								<div class="article-toc" style="display: none;"></div>
-							</ul>
-			
-								</li>
-								
-							</ul>
-			
-							<ul>
-								<li class="directory">
-									<a href="#" class="directory">
-										<i class="fa fa-plus-square-o"></i>
-										读java编程思想的感受
-									</a>
-									
-							<ul>
-								<li class="file">
-									<a href="/2020/04/03/%E8%AF%BBjava%E7%BC%96%E7%A8%8B%E6%80%9D%E6%83%B3%E7%9A%84%E6%84%9F%E5%8F%97/%E7%AC%AC%E4%B8%80%E7%AB%A0%E5%AF%B9%E8%B1%A1%E5%AF%BC%E8%AE%BA/">
-										第一章对象导论
 									</a>
 								</li>
 								<div class="article-toc" style="display: none;"></div>
@@ -456,6 +514,7 @@ IUser userDao = session.getMapper(IUser.class);//指定代理对象代理的接�
 <p>fetchType 加载方法 立即或懒</p>
 <p>@Result(property=”user”,column=”uid”,one=@One(select=”user.IUser.findUserById”,fetchType=FetchType.EAGER))</p>
 <h1 id="Mybits简单应用基于实体类"><a href="#Mybits简单应用基于实体类" class="headerlink" title="Mybits简单应用基于实体类"></a>Mybits简单应用基于实体类</h1><p>mybits支持我们不使用代理的方式而使用写接口的实现类的方式但不常用，简单说下思路</p>
+<p><img src="..%5CMybits.jpg" alt=""></p>
 <p>实现类要完成以下步骤（这个实现类的方法相当于增强方法，增强接口的抽象方法）</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">1.根据配置信息创建Connection对象，</span><br><span class="line"></span><br><span class="line">注册驱动，获取连接</span><br><span class="line"></span><br><span class="line">2.获取预处理对象preparedSatement</span><br><span class="line"></span><br><span class="line">此处需要sql</span><br><span class="line"></span><br><span class="line">conn.prepareSatement(sql);</span><br><span class="line"></span><br><span class="line">执行查询</span><br><span class="line"></span><br><span class="line">ResultSet resultset &#x3D; prepareStatement.executeQuery（）；</span><br><span class="line"></span><br><span class="line">3.再把结果集封装为一个list</span><br><span class="line"></span><br><span class="line">此处需要获取list的泛型</span><br><span class="line"></span><br><span class="line">list&lt;E&gt; list &#x3D; new ArrayList();</span><br><span class="line"></span><br><span class="line">while(resultset .next())&#123;</span><br><span class="line"></span><br><span class="line">E element &#x3D; (E) Class.forName(配置的全限定类名).newInstance();</span><br><span class="line"></span><br><span class="line">因为数据库表名能对应类属性名</span><br><span class="line"></span><br><span class="line">所以可以采用反射的方式将返回的信息封装到类中</span><br><span class="line"></span><br><span class="line">list.add(element)</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 

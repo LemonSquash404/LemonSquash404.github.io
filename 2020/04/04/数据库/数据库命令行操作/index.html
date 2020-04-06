@@ -8,6 +8,8 @@
 	<!-- title -->
 	
 	<title>
+	
+		数据库/数据库命令行操作 | 
 	 
 	柠檬
 	</title>
@@ -214,7 +216,7 @@
 							</ul>
 			
 							<ul>
-								<li class="file">
+								<li class="file active">
 									<a href="/2020/04/04/%E6%95%B0%E6%8D%AE%E5%BA%93/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%91%BD%E4%BB%A4%E8%A1%8C%E6%93%8D%E4%BD%9C/">
 										数据库命令行操作
 									</a>
@@ -252,33 +254,106 @@
 
 	<!-- 引入正文 -->
 	<div id="content">
-		<div id="index">
-	
-		<div class="index-li">
-			<a href="/2020/03/31/%E5%88%9D%E6%AC%A1%E5%B0%9D%E8%AF%95/Hexo%E5%88%9D%E5%B0%9D%E8%AF%95/">
-				<h2 class="index-title">
-					Hexo初尝试
-				</h2>
-				<div class="index-brief">
-					这是我用Hexo写的第一篇文档，我在试过了vuepress和Hexo之后还是决定用Hexo写博客吧，用来记录生活和学习的过程，在这篇文档之前我已经试过了自定义Hexo主题和vuepress的自定义主题（最后也没做出满意的，只好用别人的主题），用了两天的时间，也从这次摸索中学习了新东西。说一些看法。
+		<h1 id="article-title">
 
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2020-03-31</span>
-                    
-                            
-                    
-                </div>
-		</div>	
+	数据库命令行操作
+</h1>
+<div class="article-meta">
 	
-	
-	<div id="index-paginator">
-		
-	</div>
+	<span>John Doe</span>
+	<span>2020-04-04 12:57:31</span>
+    
+		<div id="article-categories">
+            
+		</div>
+    
 </div>
 
+<div id="article-content">
+	<p>注意：首先要配置环境变量，在path中配置mysql的bin文件夹路径即可</p>
+<p>mysql命令要以；或\g结尾</p>
+<p>windows 下的mysql无法清屏 \q cls 清屏再重进</p>
+<p>windows下mysql不区分大小写</p>
+<p>登陆数据库 mysql -u （用户名）-p</p>
+<p>然后输入密码</p>
+<p>查看全部数据库 show database</p>
+<p>进入数据库 use （数据库名）</p>
+<p>查看全部表 show table</p>
+<p>查看单独表 show columns from （表名）</p>
+<p>其他show：</p>
+<p>show status 显示广泛的服务器状态信息</p>
+<p>show create database  显示创建特定的数据库</p>
+<p>show create table 显示创建特定的表</p>
+<p>show grants 显示授予用户（所有用户或特定用户）的安全权限</p>
+<p>show errors 和show warnings 用来显示服务器错误或警告信息</p>
+<p>help show 显允许的show语句</p>
+<p>一.Select 语句</p>
+<ol>
+<li><p>select * from（）</p>
+</li>
+<li><p>select （）from（）</p>
+</li>
+</ol>
+<ol start="3">
+<li>select distinct ( ) from ( )   查询不同的值（唯一）</li>
+</ol>
+<ol start="4">
+<li>select （） from （） 从头取5行</li>
+</ol>
+<p>​       limit 5；</p>
+<p>​      select （） from （） 从第五行向后取五行 - 不包含第五行</p>
+<p>​       limit 5,5；</p>
+<p>​      当行数不足时，有几行就会取几行</p>
+<p>​      select （） from （） 从第五行向后取五行 - 不包含第五行</p>
+<p>​     limit 4 offset ；  另一种写法</p>
+<p>5.完全限定列明</p>
+<p>select （表名）.（点）（列名） from （数据库，名）</p>
+
+</div>
+
+
+    <div class="post-guide">
+        <div class="item left">
+            
+              <a href="/2020/04/04/java%E7%9F%A5%E8%AF%86%E8%A1%A5%E5%85%85/%E7%AC%AC%E4%BA%8C%E7%AB%A0%E4%B8%80%E5%88%87%E9%83%BD%E6%98%AF%E5%AF%B9%E8%B1%A1/">
+                  <i class="fa fa-angle-left" aria-hidden="true"></i>
+                  第二章一切都是对象
+              </a>
+            
+        </div>
+        <div class="item right">
+            
+              <a href="/2020/04/03/java%E7%9F%A5%E8%AF%86%E8%A1%A5%E5%85%85/%E7%AC%AC%E4%B8%80%E7%AB%A0%E5%AF%B9%E8%B1%A1%E5%AF%BC%E8%AE%BA/">
+                第一章对象导论
+                <i class="fa fa-angle-right" aria-hidden="true"></i>
+              </a>
+            
+        </div>
+    </div>
+
+
+
+	<div id="vcomments"></div>
+
+
+<script>
+	
+		// 评论
+		new Valine({
+			av: AV,
+			el: '#vcomments',
+			notify: false,
+			verify: false,
+			path: window.location.pathname,
+			appId: '',
+			appKey: '',
+			placeholder: '请输入评论',
+			avatar: 'retro',
+			recordIP: false
+		})
+	
+	
+</script>
 	</div>
 	
 	<button id="totop-toggle" class="toggle"><i class="fa fa-angle-double-up" aria-hidden="true"></i></button>

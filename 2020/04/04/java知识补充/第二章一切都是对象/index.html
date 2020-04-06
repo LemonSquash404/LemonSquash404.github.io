@@ -8,6 +8,8 @@
 	<!-- title -->
 	
 	<title>
+	
+		java知识补充/第二章一切都是对象 | 
 	 
 	柠檬
 	</title>
@@ -145,7 +147,7 @@
 							</ul>
 			
 							<ul>
-								<li class="file">
+								<li class="file active">
 									<a href="/2020/04/04/java%E7%9F%A5%E8%AF%86%E8%A1%A5%E5%85%85/%E7%AC%AC%E4%BA%8C%E7%AB%A0%E4%B8%80%E5%88%87%E9%83%BD%E6%98%AF%E5%AF%B9%E8%B1%A1/">
 										第二章一切都是对象
 									</a>
@@ -252,33 +254,99 @@
 
 	<!-- 引入正文 -->
 	<div id="content">
-		<div id="index">
-	
-		<div class="index-li">
-			<a href="/2020/03/31/%E5%88%9D%E6%AC%A1%E5%B0%9D%E8%AF%95/Hexo%E5%88%9D%E5%B0%9D%E8%AF%95/">
-				<h2 class="index-title">
-					Hexo初尝试
-				</h2>
-				<div class="index-brief">
-					这是我用Hexo写的第一篇文档，我在试过了vuepress和Hexo之后还是决定用Hexo写博客吧，用来记录生活和学习的过程，在这篇文档之前我已经试过了自定义Hexo主题和vuepress的自定义主题（最后也没做出满意的，只好用别人的主题），用了两天的时间，也从这次摸索中学习了新东西。说一些看法。
+		<h1 id="article-title">
 
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2020-03-31</span>
-                    
-                            
-                    
-                </div>
-		</div>	
+	第二章一切都是对象
+</h1>
+<div class="article-meta">
 	
-	
-	<div id="index-paginator">
-		
-	</div>
+	<span>John Doe</span>
+	<span>2020-04-04 18:30:17</span>
+    
+		<div id="article-categories">
+            
+		</div>
+    
 </div>
 
+<div id="article-content">
+	<p>1.我们操纵的标识符是对象的引用而非对象本身</p>
+<p>2.存储位置</p>
+<p>①寄存器： 位于处理器中，是最快的存储区  不能控制也无法感受</p>
+<p>②堆栈： RAM中  用来存储java 对象的引用 双指针添加 灵活性差，但存储分配速度快</p>
+<p>③堆：  RAM  被用来存储java对象 自动添加，灵活性强，但存储分配速度慢   </p>
+<p>④常量存储： ROM   不会被改变用来放置静态常量</p>
+<p>⑤非RAM存储：  独立于程序 即没有程序运行也存在 类似流或持久化对象</p>
+<p>3.使用基本类型时，不使用new 而是创建一个自动变量直接存储值</p>
+<p>会被存储到堆栈中，且有自动包装功能将基本类型转换为包装器类型</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Character ch = <span class="keyword">new</span> Character(c);</span><br></pre></td></tr></table></figure>
+
+<p>会被包装成</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Character ch = <span class="string">'c'</span>;</span><br></pre></td></tr></table></figure>
+
+<p>4.</p>
+<p>BigInteger 支持任意精度的整数</p>
+<p>BigDecimal 支持任意精度的定点数 可以进行精确地货币计算</p>
+<p>5.</p>
+<p>java确保数组会被初始化且不能在他的范围之外被访问这种范围检查，以数组上少量的内存开销及运行时的下标检查为代价保证内存不会溢出</p>
+<p>创建一个数组对象时，相当于创建了一个引用数组</p>
+<p>java对象不具备和基本类型一样的生命周期</p>
+<p>6.</p>
+<p>基本类型只在作用域内存在</p>
+<p>java对象一直存在，而当引用消失时，就会被垃圾回收机制回收</p>
+<p>7.static关键字</p>
+<p>即静态代码</p>
+<p>静态代码域在一个类中只生成一次，无论这个类new了多少个对象，都是访问相同的静态代码域</p>
+<p>8.main 函数中的arg数组是用来存储命令行数据的</p>
+<p>9.嵌入式文档</p>
+<p>将java注释显示在html中</p>
+<p>具体使用查询javadoc即可，</p>
+
+</div>
+
+
+    <div class="post-guide">
+        <div class="item left">
+            
+              <a href="/2020/04/05/Springmvc/Springmvc%E4%B8%8D%E5%AE%8C%E5%85%A8%E6%95%B4%E5%90%88/">
+                  <i class="fa fa-angle-left" aria-hidden="true"></i>
+                  Springmvc不完全整合
+              </a>
+            
+        </div>
+        <div class="item right">
+            
+              <a href="/2020/04/04/%E6%95%B0%E6%8D%AE%E5%BA%93/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%91%BD%E4%BB%A4%E8%A1%8C%E6%93%8D%E4%BD%9C/">
+                数据库命令行操作
+                <i class="fa fa-angle-right" aria-hidden="true"></i>
+              </a>
+            
+        </div>
+    </div>
+
+
+
+	<div id="vcomments"></div>
+
+
+<script>
+	
+		// 评论
+		new Valine({
+			av: AV,
+			el: '#vcomments',
+			notify: false,
+			verify: false,
+			path: window.location.pathname,
+			appId: '',
+			appKey: '',
+			placeholder: '请输入评论',
+			avatar: 'retro',
+			recordIP: false
+		})
+	
+	
+</script>
 	</div>
 	
 	<button id="totop-toggle" class="toggle"><i class="fa fa-angle-double-up" aria-hidden="true"></i></button>
